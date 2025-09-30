@@ -26,7 +26,7 @@
 <body>
     
   
- <audio id="audio" src="./musica/"></audio>
+ <audio id="audio" src="./Ed Sheeran - Photograph (Lyrics).mp3"></audio>
 
 <div class="music-player" id="player">
   <button class="play-btn" id="playBtn">►</button>
@@ -238,6 +238,20 @@ Datos bancarios <br>
 
 
 
+<script>
+  const audio = document.getElementById("audio");
+  const playBtn = document.getElementById("playBtn");
+
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = "❚❚"; // pausa
+    } else {
+      audio.pause();
+      playBtn.textContent = "►"; // play
+    }
+  });
+</script>
 
 
 
